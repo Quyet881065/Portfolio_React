@@ -12,7 +12,7 @@ const navItems = [
 
 export const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(true);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,11 +23,12 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <nav className={cn("fixed w-full z-40 transition-all duration-300",
-            isScrolled ? "py-6  backdrop-blur-md shadow-xs" : "py-5"
+       <div className="relative">
+         <nav className={cn("fixed w-full z-40",
+            isScrolled ? "py-5 backdrop-blur-md shadow-xs" : "py-5"
         )}>
             <div className="container flex items-center justify-center">
-                
+
                 {/* desktop nav */}
                 <div className="hidden md:flex space-x-10 ml-50">
                     {navItems.map((item, index) => (
@@ -37,11 +38,11 @@ export const Navbar = () => {
                     ))}
                 </div>
                 {/* mobile nav */}
-                <button onClick={() => setIsMenuOpen((prev) => !prev)} className="md:hidden p-2 text-foreground z-50">
-                    {isMenuOpen ? <X size={24}/> : <Menu/>}
+                <button onClick={() => setIsMenuOpen((prev) => !prev)} className="md:hidden  text-foreground z-50 absolute right-5 top-3 cursor-pointer">
+                    {isMenuOpen ? <X size={27} /> : <Menu size={27} />}
                 </button>
 
-                <div className={cn("fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
+                <div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
                     "transition-all duration-300 md:hidden",
                     isMenuOpen
                         ? "opacity-100 pointer-events-auto"
@@ -57,5 +58,6 @@ export const Navbar = () => {
                 </div>
             </div>
         </nav>
+       </div>
     )
 }

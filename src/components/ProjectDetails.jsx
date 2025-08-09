@@ -3,8 +3,6 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade";
-import { Navigation, Pagination, Thumbs, Autoplay, EffectFade } from "swiper/modules"
-import { Swiper, SwiperSlide } from "swiper/react"
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utilts"
 
@@ -26,12 +24,12 @@ export const ProjectDetails = ({ items, close }) => {
     return (
         <div className="fixed top-0 bottom-0 left-0 right-0 bg-black/80 z-50">
             <div className="flex justify-center items-center min-h-full">
-                <div className="max-w-[1100px] w-full h-130 p-3 bg-zinc-800 rounded-lg relative grid grid-cols-8 space-x-2">
+                <div className="max-w-[1200px] w-full h-130 p-3 bg-zinc-800 rounded-lg relative grid grid-cols-8 space-x-2">
                     {/* LEFT */}
                     <div className="col-span-5">
-                        <div className="absolute bg-zinc-800 rounded-full p-2 right-[-11px] top-[-11px] 
+                        <div className="absolute  rounded-full p-2 right-[-11px] top-[-11px] 
                         cursor-pointer border shadow-[0_0_7px_rgba(0,0,0,0.9)] backdrop-blur-lg" onClick={close}>
-                            <Close className="text-[var(--main)]" />
+                            <Close className="text-primary  " />
                         </div>
                         {/* Slide ảnh */}
                         <div className="flex flex-col space-y-3">
@@ -54,25 +52,25 @@ export const ProjectDetails = ({ items, close }) => {
                         </div>
                     </div>
                     {/* RIGHT */}
-                    <div className="col-span-3">
-                        <h3 className="font-bold text-2xl text-[var(--main)] my-10">{items.title}</h3>
+                    <div className="col-span-3 text-white/80 break-words overflow-hidden">
+                        <h3 className="font-bold text-2xl mb-20 mt-10 text-center">{items.title}</h3>
                         <p className="my-5 font-medium text-xl">{items.description}</p>
-                        <ul className="flex flex-col items-start space-y-3">
+                        <ul className="flex flex-col items-start space-y-5">
                             <li className="">
-                                <span>Font End : </span>
+                                <span>Front End : </span>
                                 <span className="font-semibold text-lg">{items.fontend.join(" , ")}</span>
                             </li>
-                            {/* <li>
+                            <li>
                                 <span>Back End : </span>
                                 <span className="font-semibold text-lg">{items.backend.join(" , ")}</span>
-                            </li> */}
-                            <li>
-                                <span>Demo Url : </span>
-                                <span className="font-semibold text-lg">{items.demoUrl}</span>
                             </li>
-                            <li>
+                            <li className="flex flex-col">
+                                <span>Demo Url : </span>
+                                <span className="font-medium text-md">{items.demoUrl}</span>
+                            </li>
+                            <li className="flex flex-col ">
                                 <span>GitHub Url : </span>
-                                <span className="font-semibold text-lg">{items.githubUrl}</span>
+                                <span className="font-medium text-md break-all">{items.githubUrl}</span>
                             </li>
                         </ul>
                     </div>

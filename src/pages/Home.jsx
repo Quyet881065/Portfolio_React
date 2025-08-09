@@ -1,6 +1,5 @@
 import { ThemeToggle } from "../components/ThemeToggle";
 import {Navbar} from "../components/Navbar";
-import { StarBackground } from "../components/StarBackground";
 import { HeroSeclection } from "../components/HeroSeclection";
 import { AboutSelection } from "../components/AboutSelection";
 import { SkillsSelection } from "../components/SkillsSelection";
@@ -12,13 +11,7 @@ export const Home = () => {
     <div>
        {/**theme toggle */}
         <ThemeToggle/>
-
-       {/* background effects*/}
-       {/* <StarBackground /> */}
-
-       {/* narbar*/}
        <Navbar/>
-
        {/* main content*/} 
        <main>
         <HeroSeclection/>
@@ -28,9 +21,6 @@ export const Home = () => {
         <ContactSection/>
         <Footer/>
        </main>
-
-       {/* footer*/} 
-         
     </div>
     );
 }

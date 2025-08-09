@@ -1,51 +1,90 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react"
-import { image, image1,image2, image3, image4, image5,image6,image7,image8,image9, home_flower } from "@/assets/project.js"
+import {  image3, image4, image5, image6, home_flower, clothe1, clothe2, clothe3, clothe4, clothe5,clothe,  musicplayer, musicplayer2,musicplayer3,
+         image7,image8, login_flower, register_flower, cart_flower, portfolio, portfolio1, portfolio2, portfolio3,
+         portfolio4, portfolio5 , calculator1, calculator2, calculator3 } from "@/assets/project.js"
 import { useState } from "react"
 import { ProjectDetails } from "./ProjectDetails"
-import { forwardRef } from "react"
 
 const projects = [
     {
         id: 1,
-        thumbUrl : [image, image1,image2],
+        thumbUrl: [login_flower, register_flower, cart_flower],
         title: "Website Flower Shop",
-        description: "A beautiful landing page app using React and Tailwind.",
+        description: "A beautiful landing page app using React and Tailwind. ",
         image: home_flower,
         tags: ["React", "TailwindCSS"],
-        demoUrl: "#",
-        githubUrl: "#",
-        fontend:["ReactJs", "Tailwind"],
-        backend :["Spring Boot" , "Spring Security", "MySQL"]
+        demoUrl: "https://flowershopquyet.netlify.app/",
+        githubUrl: "https://github.com/Quyet881065/ProjectSem_3/tree/main/frontend",
+        fontend: ["ReactJs", "Tailwind"],
+        backend: []
     },
     {
         id: 2,
-        thumbUrl : [image3, image4,image5],
-        title: "Orbit Analytics Dashboard",
-        description:
-            "Interactive analytics dashboard with data visualization and filtering capabilities.",
-        image: "/projects/project2.png",
-        tags: ["TypeScript", "D3.js", "Next.js"],
-        demoUrl: "#",
-        githubUrl: "#",
-        fontend:["ReactJs", "Tailwind"],
-        backend :["Spring Boot" , "Spring Security", "MySQL"]
+        thumbUrl: [clothe1, clothe2, clothe3,clothe4, clothe5],
+        title: "Website Clothes Shop",
+        description: "A beautiful landing page app using React and Tailwind.",
+        image: clothe,
+        tags: ["React", "TailwindCSS"],
+        demoUrl: "https://ecommercequyet.netlify.app/",
+        githubUrl: "https://github.com/Quyet881065/ecommerce-app",
+        fontend: ["ReactJs", "Tailwind"],
+        backend: ["NodeJs, Express" , "MongoDB"]
     },
     {
         id: 3,
-        thumbUrl : [image7, image8, image9],
-        title: "E-commerce Platform",
+        thumbUrl: [image3, image4, image5,image6, image7, image8],
+        title: "Todo List",
         description:
-            "Full-featured e-commerce platform with user authentication and payment processing.",
-        image: "/projects/project3.png",
-        tags: ["React", "Node.js", "Stripe"],
-        demoUrl: "#",
-        githubUrl: "#",
-        fontend:["ReactJs", "Tailwind"],
-        backend :["Spring Boot" , "Spring Security", "MySQL"]
+            "A beautiful landing page app using React and Tailwind. CRUD task save localStorage",
+        image: image3,
+        tags: ["React", "TailwindCSS", "Shadcn"],
+        demoUrl: "https://todolistquyet.netlify.app/",
+        githubUrl: "https://github.com/Quyet881065/react-todoList",
+        fontend: ["ReactJs", "Tailwind", "Shadcn"],
+        backend: []
+    },
+    {
+        id: 4,
+        thumbUrl: [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5],
+        title: "Personal Portfolio",
+        description:
+            "A beautiful landing page app using React and Tailwind. Introduce yourseft",
+        image: portfolio,
+        tags: ["React", "Tailwind"],
+        demoUrl: "https://portfolio-quyet.io.vn/",
+        githubUrl: "https://github.com/Quyet881065/Portfolio_React",
+        fontend: ["ReactJs", "Tailwind"],
+        backend: []
+    },
+    {
+        id: 5,
+        thumbUrl: [calculator2, calculator3],
+        title: "Calculator App",
+        description:
+            "A beautiful landing page app using React and Tailwind.",
+        image: calculator1,
+        tags: ["React", "Tailwind"],
+        demoUrl: "https://calculator-react-quyet.netlify.app/",
+        githubUrl: "https://github.com/Quyet881065/calculator-react",
+        fontend: ["ReactJs", "Tailwind"],
+        backend: []
+    },
+    {
+        id: 6,
+        thumbUrl: [musicplayer2, musicplayer3],
+        title: "Music Player",
+        description:
+            "A beautiful landing page app using React and Tailwind.",
+        image: musicplayer,
+        tags: ["React", "Tailwind"],
+        demoUrl: "https://musicplayquyet.netlify.app/",
+        githubUrl: "https://github.com/Quyet881065/music_play",
+        fontend: ["ReactJs", "Tailwind"],
+        backend: []
     },
 ]
 
-export const ProjectsSection = forwardRef((props, ref)=> {
+export const ProjectsSection = () => {
     const [isOpenDetail, setIsOpenDetail] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
 
@@ -57,40 +96,41 @@ export const ProjectsSection = forwardRef((props, ref)=> {
         setIsOpenDetail(false);
     }
     return (
-        <section ref={ref} id="projetcts" className="py-25 relative ">
+        <section id="projetcts" className="py-25 relative ">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-5">Featured <span className="text-primary"> Projects</span></h2>
                 <p className="text-center mb-10 max-w-2xl mx-auto">
-                    Here are some of my recent projects. Each project was carefully
-                    crafted with attention to detail, performance, and user experience.
+                    Here are some of my recent projects.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project, index) => (
-                        <div key={index} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover" onClick={() => handleOpen(project)}>
-                            <div className="h-48 overflow-hidden">
-                                <img src={project.image} alt={project.title}
-                                 className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"/>
-                            </div>
-                            <div className="p-6">
-                                <div className="flex flex-wrap gap-2 mb-3">
-                                    {project.tags.map((tag) =>(
-                                        <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">{tag}</span>
-                                    ))}
+                        <div key={index} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
+                            <div onClick={() => handleOpen(project)}>
+                                <div className="h-48 overflow-hidden">
+                                    <img src={project.image} alt={project.title}
+                                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110" />
                                 </div>
+                                <div className="p-6">
+                                    <div className="flex flex-wrap gap-2 mb-3">
+                                        {project.tags.map((tag) => (
+                                            <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">{tag}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                                <p className="text-sm ">{project.description}</p>
                             </div>
-                            <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                            <p className="text-sm ">{project.description}</p>
                             <div className="flex justify-between items-center">
                                 <div className="flex space-x-3">
                                     <a href={project.demoUrl}
                                         target="_blank"
                                         className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                                        <ExternalLink size={20}/>
+                                        <ExternalLink size={20} />
                                     </a>
                                     <a href={project.githubUrl}
                                         target="_blank"
                                         className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                                        <Github size={20}/>
+                                        <Github size={20} />
                                     </a>
                                 </div>
                             </div>
@@ -99,13 +139,13 @@ export const ProjectsSection = forwardRef((props, ref)=> {
                 </div>
                 <div className="text-center mt-12">
                     <a className="w-fit bg-blue-500 p-3 rounded-lg flex items-center mx-auto gap-2"
-                       href="https://github.com/Quyet881065"
-                       target="_blank"
-                       >Check My Github <ArrowRight size={16}/> </a>
+                        href="https://github.com/Quyet881065"
+                        target="_blank"
+                    >Check My Github <ArrowRight size={16} /> </a>
                 </div>
             </div>
-            {isOpenDetail && <ProjectDetails items={selectedProject} close={handleClose}/>}
+            {isOpenDetail && <ProjectDetails items={selectedProject} close={handleClose} />}
         </section>
     )
 
-})
+}
