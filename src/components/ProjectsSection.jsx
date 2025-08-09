@@ -138,7 +138,7 @@ export const ProjectsSection = () => {
                     ))}
                 </div>
                 <div className="text-center mt-12">
-                    <a className="w-fit bg-blue-500 p-3 rounded-lg flex items-center mx-auto gap-2"
+                    <a className="w-fit bg-orange-500 p-3 rounded-lg flex items-center mx-auto gap-2"
                         href="https://github.com/Quyet881065"
                         target="_blank"
                     >Check My Github <ArrowRight size={16} /> </a>

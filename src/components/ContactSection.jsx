@@ -60,7 +60,7 @@ export const ContactSection = () => {
                                     <Phone className="h-6 w-6 text-primary" />
                                 </div>
                                 <div>
-                                    <h4>Phone</h4>
+                                    <h4>Phone-Zalo</h4>
                                     <a href="tel:+11234567890"
                                         className="hover:text-primary transition-colors">
                                         0326881065
@@ -82,20 +82,6 @@ export const ContactSection = () => {
                         </div>
                         <div>
                             <h4 className="font-medium mb-4"> Connect With Me</h4>
-                            {/* <div className="flex space-x-4 justify-center">
-                                <a href="#" target="_blank">
-                                    <Linkedin />
-                                </a>
-                                <a href="#" target="_blank">
-                                    <Twitter />
-                                </a>
-                                <a href="#" target="_blank">
-                                    <Instagram />
-                                </a>
-                                <a href="#" target="_blank">
-                                    <Twitch />
-                                </a>
-                            </div> */}
                         </div>
                     </div>
 
@@ -130,7 +116,7 @@ export const ContactSection = () => {
                                     placeholder="Hello, I'd like to talk about..."
                                 />
                             </div>
-                            <button type="submit" className={cn("w-full bg-blue-500 flex items-center justify-center gap-2 p-3 rounded-lg cursor-pointer")}>
+                            <button type="submit" className={cn("w-full bg-orange-500 flex items-center justify-center gap-2 p-3 rounded-lg cursor-pointer")}>
                                 {isSubmitting ? "Sending..." : "Send Message"} <Send size={19} />
                             </button>
                         </form>
