@@ -1,6 +1,6 @@
 import { ArrowDown, ArrowRight } from "lucide-react"
 import { ButtonCustom } from "./button/ButtonCustom"
-import { avatar } from "@/assets/project"
+import { avatar } from "../assets/project"
 
 export const HeroSeclection = () => {
     return (
