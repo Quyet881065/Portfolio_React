@@ -1,10 +1,4 @@
 import avatar from './projects/avatar.png';
-import image3 from './projects/image3.png'
-import image4 from './projects/image4.png'
-import image5 from './projects/image5.png'
-import image6 from './projects/image6.png'
-import image7 from './projects/image7.png'
-import image8 from './projects/image8.png'
 import home_flower from './projects/Home_flower.png'
 import login_flower from "./projects/login_flower.png"
 import register_flower from "./projects/register_flower.png"
@@ -27,12 +21,15 @@ import calculator3 from "./projects/calculator3.png"
 import musicplayer from "./projects/music-play.png"
 import musicplayer2 from "./projects/music-play2.png"
 import musicplayer3 from "./projects/music-play3.png"
+import quanlychitieu1 from "./projects/quanlychitieu1.png"
+import quanlychitieu2 from "./projects/quanlychitieu2.png"
+import quanlychitieu3 from "./projects/quanlychitieu3.png"
 
 
 
 
 export{
-     image3,image4,image5,image6, clothe, clothe1, clothe2, clothe3, clothe4, clothe5,
-    home_flower, avatar, image7, image8, login_flower, register_flower, cart_flower, musicplayer, musicplayer2,musicplayer3,
+      clothe, clothe1, clothe2, clothe3, clothe4, clothe5, quanlychitieu1, quanlychitieu2, quanlychitieu3,
+    home_flower, avatar,login_flower, register_flower, cart_flower, musicplayer, musicplayer2,musicplayer3,
     portfolio, portfolio1, portfolio2, portfolio3,portfolio4, portfolio5, calculator1, calculator2, calculator3
 }

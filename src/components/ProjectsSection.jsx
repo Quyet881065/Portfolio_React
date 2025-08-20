@@ -1,7 +1,7 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react"
-import {  image3, image4, image5, image6, home_flower, clothe1, clothe2, clothe3, clothe4, clothe5,clothe,  musicplayer, musicplayer2,musicplayer3,
-         image7,image8, login_flower, register_flower, cart_flower, portfolio, portfolio1, portfolio2, portfolio3,
-         portfolio4, portfolio5 , calculator1, calculator2, calculator3 } from "@/assets/project.js"
+import {  home_flower, clothe1, clothe2, clothe3, clothe4, clothe5,clothe,  musicplayer, musicplayer2,musicplayer3,
+          login_flower, register_flower, cart_flower, portfolio, portfolio1, portfolio2, portfolio3,
+         portfolio4, portfolio5 , calculator1, calculator2, calculator3 , quanlychitieu1, quanlychitieu2, quanlychitieu3 } from "@/assets/project.js"
 import { useState } from "react"
 import { ProjectDetails } from "./ProjectDetails"
 
@@ -32,15 +32,15 @@ const projects = [
     },
     {
         id: 3,
-        thumbUrl: [image3, image4, image5,image6, image7, image8],
-        title: "Todo List",
+        thumbUrl: [quanlychitieu1, quanlychitieu2, quanlychitieu3],
+        title: "Management spending",
         description:
             "A beautiful landing page app using React and Tailwind. CRUD task save localStorage",
-        image: image3,
+        image: quanlychitieu1,
         tags: ["React", "TailwindCSS", "Shadcn"],
-        demoUrl: "https://todolistquyet.netlify.app/",
-        githubUrl: "https://github.com/Quyet881065/react-todoList",
-        fontend: ["ReactJs", "Tailwind", "Shadcn"],
+        demoUrl: "https://quanlychitieuu.netlify.app/",
+        githubUrl: "https://github.com/Quyet881065/quanlychitieu",
+        fontend: ["ReactJs", "Tailwind", "Recharts"],
         backend: []
     },
     {
